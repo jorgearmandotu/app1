@@ -1,0 +1,23 @@
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\bin\Debug\ResourcesApp.dll
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\bin\Debug\ResourcesApp.pdb
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Debug\ResourcesApp.StringResources.resources
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.GenerateResource.cache
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.CoreCompileInputs.cache
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Debug\ResourcesApp.dll
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Debug\ResourcesApp.pdb
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\bin\Debug\ResourcesApp.dll
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\bin\Debug\ResourcesApp.pdb
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Debug\ResourcesApp.csprojAssemblyReference.cache
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Debug\ResourcesApp.StringResources.resources
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.GenerateResource.cache
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.CoreCompileInputs.cache
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Debug\ResourcesApp.dll
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Debug\ResourcesApp.pdb
+C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\bin\Debug\ResourcesApp.dll
+C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\bin\Debug\ResourcesApp.pdb
+C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.csprojAssemblyReference.cache
+C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.StringResources.resources
+C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.GenerateResource.cache
+C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.CoreCompileInputs.cache
+C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.dll
+C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.pdb

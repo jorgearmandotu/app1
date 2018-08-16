@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmbSelecionCategoria" xml:space="preserve">
+    <value>Seleccione categoria</value>
+    <comment>texto combobox categoria en index 0</comment>
+  </data>
+  <data name="MessageCamposErroneos" xml:space="preserve">
+    <value>Ingrese datos validos</value>
+    <comment>mensaje cuando los campos digitados son vacios o erroneos</comment>
+  </data>
+  <data name="MessageErrorEnInsercion" xml:space="preserve">
+    <value>No fue posible agregar datos</value>
+    <comment>cuando falla e ingreso a db</comment>
+  </data>
+  <data name="MessageInsercionExitosa" xml:space="preserve">
+    <value>Transaccion exitosa</value>
+    <comment>cuando se ingresa datos a db</comment>
+  </data>
+  <data name="titleVentana" xml:space="preserve">
+    <value>Control Inventario</value>
+    <comment>titulo de ventana</comment>
+  </data>
+  <data name="labelCantidad" xml:space="preserve">
+    <value>Cantidad:</value>
+    <comment>etiqueta cantidad</comment>
+  </data>
+  <data name="labelCategoria" xml:space="preserve">
+    <value>Categoria:</value>
+    <comment>etiqueta categoria</comment>
+  </data>
+  <data name="labelCodProducto" xml:space="preserve">
+    <value>Codigo Producto:</value>
+    <comment>etiqueta producto</comment>
+  </data>
+  <data name="labelNit" xml:space="preserve">
+    <value>Nit:</value>
+    <comment>etiqueta nit</comment>
+  </data>
+  <data name="labelNombre" xml:space="preserve">
+    <value>Nombre:</value>
+    <comment>etiqueta nombre</comment>
+  </data>
+  <data name="labelProducto" xml:space="preserve">
+    <value>Producto:</value>
+    <comment>etiqueta producto</comment>
+  </data>
+  <data name="labelProveedor" xml:space="preserve">
+    <value>Proveedor:</value>
+    <comment>etiqueta proveedor</comment>
+  </data>
+  <data name="labelUnidad" xml:space="preserve">
+    <value>Unidad:</value>
+    <comment>etiqueta unidad</comment>
+  </data>
+  <data name="labelVlrUnitario" xml:space="preserve">
+    <value>Vlr Unitario:</value>
+    <comment>etiqueta vlr unitario</comment>
+  </data>
+  <data name="tabIngreso" xml:space="preserve">
+    <value>Ingresos</value>
+    <comment>title secion ingresos</comment>
+  </data>
+  <data name="tabPreferencias" xml:space="preserve">
+    <value>Preferencias</value>
+    <comment>title seccion preferencias</comment>
+  </data>
+  <data name="tabReportes" xml:space="preserve">
+    <value>Reportes</value>
+    <comment>title seccion reportes</comment>
+  </data>
+  <data name="tabSalidas" xml:space="preserve">
+    <value>Salidas</value>
+    <comment>title secion salidas</comment>
+  </data>
+  <data name="textoIngresar" xml:space="preserve">
+    <value>Ingresar</value>
+    <comment>texto ingresar de botones</comment>
+  </data>
+  <data name="titleIngresocategoria" xml:space="preserve">
+    <value>Registro de categorias</value>
+    <comment>titulo de ingreso categoria</comment>
+  </data>
+  <data name="titleIngresoClientes" xml:space="preserve">
+    <value>Ingreso de clientes</value>
+    <comment>titulo de ingreso clientes</comment>
+  </data>
+  <data name="titleIngresoProducto" xml:space="preserve">
+    <value>Ingreso de productos</value>
+    <comment>titulo de ingreso producto</comment>
+  </data>
+  <data name="titleIngresoProveedor" xml:space="preserve">
+    <value>Ingreso de Proveedores</value>
+    <comment>titulo de ingreso proveedores</comment>
+  </data>
+  <data name="textinsertImagen" xml:space="preserve">
+    <value>Insertar Imagen</value>
+    <comment>texto de insertar imagen</comment>
+  </data>
+  <data name="MessageCategoriaNotExist" xml:space="preserve">
+    <value>La categoria de producto no se encuentra registrada</value>
+    <comment>mensaje cuando e codigo de categoria no se encuentra registtrado en db</comment>
+  </data>
+  <data name="MessageCodProductoExist" xml:space="preserve">
+    <value>El codigo de producto ya existe</value>
+    <comment>mensjae cuando el codigo de producto ya se encuentra registrado en db</comment>
+  </data>
+  <data name="MessageProveedorNotExist" xml:space="preserve">
+    <value>El proveedor no se encuentra registrado</value>
+    <comment>mensaje cuando proveedor no se encuentra en la base de datos</comment>
+  </data>
+  <data name="textPwd" xml:space="preserve">
+    <value>Contraseña:</value>
+    <comment>text password</comment>
+  </data>
+  <data name="textUsuario" xml:space="preserve">
+    <value>Usuario:</value>
+    <comment>text de usuario</comment>
+  </data>
+  <data name="titlelogin" xml:space="preserve">
+    <value>Login</value>
+    <comment>titulo login</comment>
+  </data>
+  <data name="MessageProductoNotExist" xml:space="preserve">
+    <value>Producto No existe, registrelo primero</value>
+    <comment>mensaje de error cuando producto no existe en db</comment>
+  </data>
+  <data name="MessageCantidadNoValida" xml:space="preserve">
+    <value>Ingrese cantidad valida, solo se admite numeros Enteros</value>
+    <comment>mensaje cantidad no valida</comment>
+  </data>
+  <data name="MessageIdClienteExist" xml:space="preserve">
+    <value>La identificacion de este cliente ya esta registrado pertenece a: </value>
+    <comment>mensaje cuando clliente ya existe</comment>
+  </data>
+  <data name="MessageIdProveedorExist" xml:space="preserve">
+    <value>La identifiacion de este proveedor ya esta registrado pertenece a: </value>
+    <comment>mensjae cuando proveedor ya existe</comment>
+  </data>
+  <data name="MessageNombreCategoriaExist" xml:space="preserve">
+    <value>Esta categoria ya se encuentra registrada, :</value>
+    <comment>mensaje categoria ya existe</comment>
+  </data>
+  <data name="labelCliente" xml:space="preserve">
+    <value>Cliente: </value>
+    <comment>etiqueta cliente</comment>
+  </data>
+  <data name="titleIngresos" xml:space="preserve">
+    <value>Registro de Ingresos</value>
+    <comment>titulo de registro de ingresos</comment>
+  </data>
+  <data name="titleSalidas" xml:space="preserve">
+    <value>Registro de Salidas</value>
+    <comment>titulo de registro de salidas</comment>
+  </data>
+  <data name="MessageNohayCantidadSuficiente" xml:space="preserve">
+    <value>No hay disponible una cantidad tan grande en bodega</value>
+    <comment>mensjaew cuando el tamaño de salida es mayor al que hay en existencia</comment>
+  </data>
+</root>

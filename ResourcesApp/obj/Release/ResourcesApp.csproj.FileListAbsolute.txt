@@ -1,0 +1,16 @@
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\bin\Release\ResourcesApp.dll
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\bin\Release\ResourcesApp.pdb
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Release\ResourcesApp.csprojAssemblyReference.cache
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Release\ResourcesApp.StringResources.resources
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Release\ResourcesApp.csproj.GenerateResource.cache
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Release\ResourcesApp.csproj.CoreCompileInputs.cache
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Release\ResourcesApp.dll
+C:\Users\ASD\Documents\C#\app1\ResourcesApp\obj\Release\ResourcesApp.pdb
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\bin\Release\ResourcesApp.dll
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\bin\Release\ResourcesApp.pdb
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Release\ResourcesApp.csprojAssemblyReference.cache
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Release\ResourcesApp.StringResources.resources
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Release\ResourcesApp.csproj.GenerateResource.cache
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Release\ResourcesApp.csproj.CoreCompileInputs.cache
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Release\ResourcesApp.dll
+C:\Users\home\Documents\programas c#\app1\ResourcesApp\obj\Release\ResourcesApp.pdb

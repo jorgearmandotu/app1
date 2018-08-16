@@ -1,0 +1,64 @@
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\app1.exe.config
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\app1.exe
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\app1.pdb
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\EntityFramework.dll
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\ResourcesApp.dll
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\System.Data.SQLite.dll
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\ResourcesApp.pdb
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\EntityFramework.xml
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\System.Data.SQLite.xml
+C:\Users\ASD\Documents\C#\app1\app1\bin\Release\System.Data.SQLite.dll.config
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1.csprojAssemblyReference.cache
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\AutoCompleteTextbox.g.cs
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\MainWindow.g.cs
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\Login.g.cs
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\App.g.cs
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1_MarkupCompile.cache
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1_MarkupCompile.lref
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\AutoCompleteTextbox.baml
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\MainWindow.baml
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\Login.baml
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1.g.resources
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1.Properties.Resources.resources
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1.csproj.GenerateResource.cache
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1.csproj.CoreCompileInputs.cache
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1.csproj.CopyComplete
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1.exe
+C:\Users\ASD\Documents\C#\app1\app1\obj\Release\app1.pdb
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\app1.exe.config
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\app1.exe
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\app1.pdb
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\EntityFramework.dll
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\ResourcesApp.dll
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\System.Data.SQLite.dll
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\ResourcesApp.pdb
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\EntityFramework.xml
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\System.Data.SQLite.xml
+C:\Users\home\Documents\programas c#\app1\app1\bin\Release\System.Data.SQLite.dll.config
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1.csprojAssemblyReference.cache
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\AutoCompleteTextbox.g.cs
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\MainWindow.g.cs
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\Login.g.cs
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\App.g.cs
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1_MarkupCompile.cache
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1_MarkupCompile.lref
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\AutoCompleteTextbox.baml
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\MainWindow.baml
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\Login.baml
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1.g.resources
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1.Properties.Resources.resources
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1.csproj.GenerateResource.cache
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1.csproj.CoreCompileInputs.cache
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1.csproj.CopyComplete
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1.exe
+C:\Users\home\Documents\programas c#\app1\app1\obj\Release\app1.pdb
