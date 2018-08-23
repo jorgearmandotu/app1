@@ -21,3 +21,11 @@ C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\R
 C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.CoreCompileInputs.cache
 C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.dll
 C:\Users\ASD\Documents\Visual Studio 2017\proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.pdb
+D:\C# Proyects\app1\ResourcesApp\bin\Debug\ResourcesApp.dll
+D:\C# Proyects\app1\ResourcesApp\bin\Debug\ResourcesApp.pdb
+D:\C# Proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.csprojAssemblyReference.cache
+D:\C# Proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.StringResources.resources
+D:\C# Proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.GenerateResource.cache
+D:\C# Proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.csproj.CoreCompileInputs.cache
+D:\C# Proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.dll
+D:\C# Proyects\app1\ResourcesApp\obj\Debug\ResourcesApp.pdb

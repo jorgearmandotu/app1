@@ -70,6 +70,15 @@ namespace ResourcesApp {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Generar reporte.
+        /// </summary>
+        public static string generarReporte {
+            get {
+                return ResourceManager.GetString("generarReporte", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Cantidad:.
         /// </summary>
         public static string labelCantidad {
@@ -102,6 +111,24 @@ namespace ResourcesApp {
         public static string labelCodProducto {
             get {
                 return ResourceManager.GetString("labelCodProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seleccione fecha Final: .
+        /// </summary>
+        public static string labelFechaFin {
+            get {
+                return ResourceManager.GetString("labelFechaFin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selecione fecha inical: .
+        /// </summary>
+        public static string labelFechaInicio {
+            get {
+                return ResourceManager.GetString("labelFechaInicio", resourceCulture);
             }
         }
         

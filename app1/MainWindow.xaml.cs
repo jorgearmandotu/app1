@@ -21,6 +21,7 @@ using System.IO.Packaging;
 using System.IO;
 using app1.objetos;
 using System.Threading;
+//using Microsoft.Office.Interop.Excel;
 
 namespace app1
 {
@@ -244,31 +245,27 @@ namespace app1
         {
 
             
-
+            this.Cursor = Cursors.Wait;
 
             String id = txtNitProveedor.Text.Trim();
             String nombre = txtNombreProveedor.Text.Trim();
             if (String.IsNullOrEmpty(id) || String.IsNullOrEmpty(nombre))
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageCamposErroneos);
             }
             else
             {
-
-                Thread proceso = new Thread(new ThreadStart(IngresoProveedor));
-                proceso.Start(id, nombre);
-                
-                Loading load = new Loading();
-                load.Owner = this;
-                load.ShowDialog();
-                //IngresoProveedor(id, nombre);
-
+                IngresoProveedor(id, nombre);
+                this.Cursor = Cursors.Arrow;
             }
+            //this.Cursor = Cursors.Arrow;
+
         }
 
         private void IngresoProveedor(String id, String nombre)
         {
-            
+            this.Cursor = Cursors.Wait;
             DataBase db = new DataBase();
 
             String tabla = ValuesDB.tablaProveedor;
@@ -279,6 +276,7 @@ namespace app1
 
             if (valorExistente != null)
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show($"{StringResources.MessageIdProveedorExist} {valorExistente}");
                 return;
             }
@@ -287,6 +285,7 @@ namespace app1
 
             if (db.InsertarSQL(sql))
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageInsercionExitosa);
                 txtNitProveedor.Text = "";
                 txtNombreProveedor.Text = "";
@@ -295,16 +294,19 @@ namespace app1
             }
             else
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageErrorEnInsercion);
             }
         }
 
         private void btnIngresoCliente_Click(object sender, RoutedEventArgs e)
         {
+            this.Cursor = Cursors.Wait;
             String id = txtidCliente.Text.Trim();
             String nombre = txtNombrecliente.Text.Trim();
             if (String.IsNullOrEmpty(id) || String.IsNullOrEmpty(nombre))
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageCamposErroneos);
             }
             else
@@ -320,6 +322,7 @@ namespace app1
 
                 if (valorExistente != null)
                 {
+                    this.Cursor = Cursors.Arrow;
                     MessageBox.Show($"{StringResources.MessageIdClienteExist} {valorExistente}");
                     return;
                 }
@@ -327,6 +330,7 @@ namespace app1
                 String sql = $"insert into clientes values('{id}', '{nombre}')";
                 if (db.InsertarSQL(sql))
                 {
+                    this.Cursor = Cursors.Arrow;
                     MessageBox.Show(StringResources.MessageInsercionExitosa);
                     txtidCliente.Text = "";
                     txtNombrecliente.Text = "";
@@ -335,6 +339,7 @@ namespace app1
                 }
                 else
                 {
+                    this.Cursor = Cursors.Arrow;
                     MessageBox.Show(StringResources.MessageErrorEnInsercion);
                 }
             }
@@ -342,9 +347,11 @@ namespace app1
 
         private void btnIngresoCategoria_Click(object sender, RoutedEventArgs e)
         {
+            this.Cursor = Cursors.Wait;
             String nombre = txtNombreCategoria.Text.Trim();
             if (String.IsNullOrEmpty(nombre))
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageCamposErroneos);
             }
             else
@@ -358,6 +365,7 @@ namespace app1
 
                 if (valorExistente != null)
                 {
+                    this.Cursor = Cursors.Arrow;
                     MessageBox.Show($"{StringResources.MessageNombreCategoriaExist} {valorExistente}");
                     return;
                 }
@@ -365,24 +373,23 @@ namespace app1
                 String sql = $"insert into categoria (nombre) values('{nombre}')";
                 if (db.InsertarSQL(sql))
                 {
+                    this.Cursor = Cursors.Arrow;
                     MessageBox.Show(StringResources.MessageInsercionExitosa);
                     txtNombreCategoria.Text = "";
                     cargarcmbIngCategoria();
                 }
                 else
                 {
+                    this.Cursor = Cursors.Arrow;
                     MessageBox.Show(StringResources.MessageErrorEnInsercion);
                 }
             }
         }
 
-        /* private void Button_Click(object sender, RoutedEventArgs e)
-         {
-
-         }*/
 
         private void btnIngresoProducto_Click(object sender, RoutedEventArgs e)
         {
+            this.Cursor = Cursors.Wait;
             String categoria = cmbIngCategoria.Text.Trim();
             String codProducto = txtCodIngProducto.Text.Trim();
             String producto = txtNombreProducto.Text.Trim();
@@ -396,6 +403,7 @@ namespace app1
 
             if (ObtenerCampo(codProducto, tabla, camBusq, camBusq) != null)
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageCodProductoExist);
                 return;
             }
@@ -411,6 +419,7 @@ namespace app1
             categoria = ObtenerCampo(categoria, tabla, camBusq, campoReturn);
             if (categoria == null)
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageCategoriaNotExist);
                 return;
             }
@@ -420,6 +429,7 @@ namespace app1
             if (String.IsNullOrEmpty(codProducto) || String.IsNullOrEmpty(producto)
                 || String.IsNullOrEmpty(unidad))
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageCamposErroneos);
                 return;
             }
@@ -444,6 +454,7 @@ namespace app1
                     RutaImagen = s + $"..\\..\\..\\\\resources\\imagenes\\{codProducto}";
                     if (File.Exists(RutaImagen))
                     {
+                        this.Cursor = Cursors.Arrow;
                         MessageBox.Show("ya existe este codigo de producto", "Alerta", MessageBoxButton.OK, MessageBoxImage.Warning);
 
                         return;
@@ -456,15 +467,18 @@ namespace app1
                 }
                 else
                 {
+                    this.Cursor = Cursors.Arrow;
                     MessageBox.Show("Nose encontro el archivo", "Alerta", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
 
             }
-            MessageBox.Show(insercion);
+            
 
             if (db.InsertarTransaacionSQL(insercion))
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageInsercionExitosa);
+                cmbIngCategoria.SelectedIndex = 0;
                 txtCodIngProducto.Text = "";
                 txtNombreProducto.Text = "";
                 //txtProveedorIngProducto.Text = "";
@@ -476,6 +490,7 @@ namespace app1
             }
             else
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageErrorEnInsercion);
             }
             db.CerrarCon();
@@ -540,6 +555,7 @@ namespace app1
 
         private void RegistroIngresos(object sender, RoutedEventArgs e)
         {
+            this.Cursor = Cursors.Wait;
             String producto = txtProducto.Text.Trim();
             String proveedor = txtProveedor.Text.Trim();
             String cantidad = txtCantidad.Text.Trim();
@@ -551,6 +567,7 @@ namespace app1
             String codigoP = ObtenerCampo(producto, tabla, camBusq, codigoObtener);
             if (codigoP == null)
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageProductoNotExist);
                 return;
             }
@@ -562,6 +579,7 @@ namespace app1
             String codigoProvee = ObtenerCampo(proveedor, tabla, camBusq, codigoObtener);
             if (codigoProvee == null)
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageProveedorNotExist);
                 return;
             }
@@ -582,6 +600,7 @@ namespace app1
                 }
                 catch
                 {
+                    this.Cursor = Cursors.Arrow;
                     MessageBox.Show($"{StringResources.MessageCantidadNoValida}");
                     return;
                 }
@@ -603,6 +622,7 @@ namespace app1
 
             if (db.InsertarTransaacionSQL(insercion))
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageInsercionExitosa);
                 txtProducto.Text = "";
                 txtProveedor.Text = "";
@@ -612,6 +632,7 @@ namespace app1
             else
             {
                 db.CerrarCon();
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageErrorEnInsercion);
             }
 
@@ -631,8 +652,9 @@ namespace app1
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void RegistroSalidas(object sender, RoutedEventArgs e)
         {
+            this.Cursor = Cursors.Wait;
             String producto = txtSalidaProducto.Text.Trim();
             String cantidad = txtSalidaCantidad.Text.Trim();
             String cliente = txtSalidaCliente.Text.Trim();
@@ -650,6 +672,7 @@ namespace app1
 
             if (codCliente == null || codProducto == null)
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show("Verifique Datos ingresados");
                 return;
             }
@@ -659,6 +682,7 @@ namespace app1
             }
             catch
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show($"{StringResources.MessageCantidadNoValida}");
                 return;
             }
@@ -670,6 +694,7 @@ namespace app1
             int cantidadResultante = Int32.Parse(cantidadStock);
             if (cantidadResultante < cant)
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageNohayCantidadSuficiente);
                 return;
             }
@@ -700,6 +725,7 @@ namespace app1
 
             if (db.InsertarTransaacionSQL(insercion))
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageInsercionExitosa);
                 txtSalidaCantidad.Text = "";
                 txtSalidaCliente.Text = "";
@@ -709,6 +735,7 @@ namespace app1
             }
             else
             {
+                this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageErrorEnInsercion);
             }
 
@@ -749,6 +776,7 @@ namespace app1
 
         private void cargarIngresosDataGrid()
         {
+            this.Cursor = Cursors.Wait;
             datosGrid.Items.Clear();
             List<Ingresos> lista = IngresosDeHoy();
             //datosGrid.Items.Add(lista);
@@ -757,8 +785,51 @@ namespace app1
                 //MessageBox.Show("aa");
                 datosGrid.Items.Add(obj);
             }
+            this.Cursor = Cursors.Arrow;
 
         }
+
+        private void GenerarReporte(Object sender, RoutedEventArgs e)
+        {
+            String busqueda = txtBusquedaReporte.Text.Trim();
+            if (String.IsNullOrEmpty(busqueda))
+            {
+                MessageBox.Show(StringResources.MessageCamposErroneos);
+            }
+            else
+            {
+                //Thread t = new Thread(() => generarReporteExcel(busqueda));// metodo con lambda "funciones anonimas"
+
+                //con delegate pasar parametros al thread
+                /*Thread t = new Thread(delegate(){
+                    generarReporteExcel(busqueda);
+                });
+                t.Start();*/
+
+                //usar el hilo con clase y pasar parametros
+                ManejoExcel mExcel = new ManejoExcel(busqueda);
+                Thread t = new Thread(new ThreadStart(mExcel.GenerarReporte));
+                t.Start();
+
+                //t.IsBackground = true;
+                MessageBox.Show("se generara el reporte, púede seguir trabajando mientras se genera");
+            }
+
+            //t.IsBackground = true; // cambia el hilo a un proceso en segundo plano, lo q implica q al cerrar la app se termina
+            //el proceso si no es asi el hilo se sequira ejecutando asi se cierre la aplicacion Control foreground and background threads 
+            
+            //t.Suspend();//suspende el hilo funcion obsoleta
+            //t.Resume();//reaunda hilo solo si este ya ha sido suspendido antes funcion obsoleta en lugar de usar estas funciones usar  AutoResetEvent and EventWaitHandle
+
+        }
+        private void generarReporteExcel(String busqueda)
+        {
+            Thread.Sleep(10000);
+            MessageBox.Show("se termino de ejecutar el hilo "+ busqueda);
+        }
+        
+
+        
 
     }
 }

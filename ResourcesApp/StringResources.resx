@@ -273,4 +273,16 @@
     <value>No hay disponible una cantidad tan grande en bodega</value>
     <comment>mensjaew cuando el tamaño de salida es mayor al que hay en existencia</comment>
   </data>
+  <data name="generarReporte" xml:space="preserve">
+    <value>Generar reporte</value>
+    <comment>texto generar reporte</comment>
+  </data>
+  <data name="labelFechaFin" xml:space="preserve">
+    <value>Seleccione fecha Final: </value>
+    <comment>seleccione fecha fina</comment>
+  </data>
+  <data name="labelFechaInicio" xml:space="preserve">
+    <value>Selecione fecha inical: </value>
+    <comment>selecine fecha inicial</comment>
+  </data>
 </root>

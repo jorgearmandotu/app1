@@ -138,6 +138,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="objetos\ManejoExcel.cs" />
     <Compile Include="objetos\Movimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
