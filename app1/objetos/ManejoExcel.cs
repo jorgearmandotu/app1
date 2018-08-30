@@ -11,6 +11,10 @@ namespace app1.objetos
     public class ManejoExcel
     {
         private String criterioReporte;
+        private String fechaInicio;
+        private String fechaFinal;
+        private String ingresos;
+        private String salidas;
 
         public ManejoExcel(string criterioReporte)
         {

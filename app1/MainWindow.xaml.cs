@@ -791,10 +791,16 @@ namespace app1
 
         private void GenerarReporte(Object sender, RoutedEventArgs e)
         {
+            Boolean ingresos = false;
+            Boolean salidas = false;
             String busqueda = txtBusquedaReporte.Text.Trim();
             if (String.IsNullOrEmpty(busqueda))
             {
-                MessageBox.Show(StringResources.MessageCamposErroneos);
+                //busqueda de todos los articulos
+                if (checkIngreso.IsChecked.Value) ingresos = true;
+                if (checkSalida.IsChecked.Value) salidas = true;
+                Console.WriteLine(ingresos);
+                MessageBox.Show("veo veo");
             }
             else
             {
