@@ -799,8 +799,14 @@ namespace app1
                 //busqueda de todos los articulos
                 if (checkIngreso.IsChecked.Value) ingresos = true;
                 if (checkSalida.IsChecked.Value) salidas = true;
-                Console.WriteLine(ingresos);
-                MessageBox.Show("veo veo");
+                String fechaInicio = dateFechaInicio.Text;
+                String fechaFin = dateFechaInicio.Text;
+                DateTime fechaIici = dateFechaInicio.SelectedDate.Value;
+
+                ManejoExcel xlsx = new ManejoExcel();
+                Thread t = new Thread(new ThreadStart(xlsx.GenerarReporte));
+                t.Start();
+                MessageBox.Show("se generara el reporte, púede seguir trabajando mientras se genera");
             }
             else
             {
