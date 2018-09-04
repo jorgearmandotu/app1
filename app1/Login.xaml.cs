@@ -20,7 +20,7 @@ namespace app1
     /// </summary>
     public partial class Window1 : Window
     {
-        private const string DBName = "inventario.db";
+        private const string DBName = ValuesDB.DBName;
         public Window1()
         {
             
@@ -48,13 +48,13 @@ namespace app1
             //abro la db
             db.Open();
             //ejecuto query
-            SQLiteCommand cmd = new SQLiteCommand("select usuario, pwd from usuarios", db);
+            SQLiteCommand cmd = new SQLiteCommand($"select{ValuesDB.userUsuarioDB}, {ValuesDB.userPaswordDB} from {ValuesDB.tablausuariosDB}", db);
             SQLiteDataReader dr = cmd.ExecuteReader();
 
             Boolean login = false;
             while (dr.Read())
             {
-                if (txtUserLogin.Text == Convert.ToString(dr["usuario"]) && txtPwdLogin.Password == Convert.ToString(dr["pwd"]))
+                if (txtUserLogin.Text == Convert.ToString(dr["usuario"]) && txtPwdLogin.Password == Convert.ToString(dr["pasword"]))
                 {
                     MainWindow dasborad = new MainWindow();
                     dasborad.Show();
