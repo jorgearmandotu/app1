@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace app1.data
 {
-    class ValuesDB
+    public class ValuesDB
     {
 
         public  const String DBName = "data.db";

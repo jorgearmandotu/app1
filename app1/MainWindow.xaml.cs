@@ -30,7 +30,7 @@ namespace app1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const string DBName = "inventario.db";
+        private const string DBName = ValuesDB.DBName;
 
         public MainWindow()
         {
