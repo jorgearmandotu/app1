@@ -104,6 +104,7 @@
     <Compile Include="AutoCompleteTextbox.xaml.cs">
       <DependentUpon>AutoCompleteTextbox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreacionDataBase.cs" />
     <Compile Include="data\DataBase.cs" />
     <Compile Include="data\ValuesDB.cs" />
     <Compile Include="Login.xaml.cs">

@@ -37,11 +37,11 @@ namespace app1
 
             InitializeComponent();
            
-            cargartxtProductos();
+           /* cargartxtProductos();
             cargartxtProveedor();
             cargarcmbIngCategoria();
             cargarTxtClientes();
-            cargartxtBusquedaReporte();
+            cargartxtBusquedaReporte();*/
             //var instFolder = Package.Current.InstalledLocation;
             //var imgPath = @"ms-appx:///Assets\conejo.bmp";
             var s = Directory.GetCurrentDirectory();
@@ -244,7 +244,7 @@ namespace app1
         private void btnIngresoProveedor_Click(object sender, RoutedEventArgs e)
         {
 
-            
+          /*  
             this.Cursor = Cursors.Wait;
 
             String id = txtNitProveedor.Text.Trim();
@@ -260,11 +260,11 @@ namespace app1
                 this.Cursor = Cursors.Arrow;
             }
             //this.Cursor = Cursors.Arrow;
-
+            */
         }
-
+        
         private void IngresoProveedor(String id, String nombre)
-        {
+        {/*
             this.Cursor = Cursors.Wait;
             DataBase db = new DataBase();
 
@@ -296,11 +296,11 @@ namespace app1
             {
                 this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageErrorEnInsercion);
-            }
+            }*/
         }
 
         private void btnIngresoCliente_Click(object sender, RoutedEventArgs e)
-        {
+        {/*
             this.Cursor = Cursors.Wait;
             String id = txtidCliente.Text.Trim();
             String nombre = txtNombrecliente.Text.Trim();
@@ -342,11 +342,11 @@ namespace app1
                     this.Cursor = Cursors.Arrow;
                     MessageBox.Show(StringResources.MessageErrorEnInsercion);
                 }
-            }
+            }*/
         }
-
+        
         private void btnIngresoCategoria_Click(object sender, RoutedEventArgs e)
-        {
+        {/*
             this.Cursor = Cursors.Wait;
             String nombre = txtNombreCategoria.Text.Trim();
             if (String.IsNullOrEmpty(nombre))
@@ -370,7 +370,7 @@ namespace app1
                     return;
                 }
 
-                String sql = $"insert into categoria (nombre) values('{nombre}')";
+                String sql = $"insert into categoria ({ValuesDB.categoriNombreDB}) values('{nombre}')";
                 if (db.InsertarSQL(sql))
                 {
                     this.Cursor = Cursors.Arrow;
@@ -383,12 +383,12 @@ namespace app1
                     this.Cursor = Cursors.Arrow;
                     MessageBox.Show(StringResources.MessageErrorEnInsercion);
                 }
-            }
+            }*/
         }
 
 
         private void btnIngresoProducto_Click(object sender, RoutedEventArgs e)
-        {
+        {/*
             this.Cursor = Cursors.Wait;
             String categoria = cmbIngCategoria.Text.Trim();
             String codProducto = txtCodIngProducto.Text.Trim();
@@ -494,14 +494,14 @@ namespace app1
                 MessageBox.Show(StringResources.MessageErrorEnInsercion);
             }
             db.CerrarCon();
-
+            */
 
         }
-
+        
         private String ObtenerCampo(String condicion, String tabla, String campoBusqueda, String campoResultado)
         {
             String campo = null;
-            String sql = $"select * from {tabla} where {campoBusqueda} = '{condicion}'";
+           /* String sql = $"select * from {tabla} where {campoBusqueda} = '{condicion}'";
             DataBase db = new DataBase();
             SQLiteDataReader dr = db.EjecutarSql(sql);
             while (dr.Read())
@@ -515,12 +515,12 @@ namespace app1
                 dr.Close();
             }
             db.CerrarCon();
-
+            */
             return campo;
         }
 
         private void btnIngImagenProducto_Click(object sender, RoutedEventArgs e)
-        {
+        {/*
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "imagenes | *.jpg; *.jpeg; *.png";
             dialog.Title = "Seleccione una Imagen";
@@ -535,7 +535,7 @@ namespace app1
                 txtRutaImgIngProducto.Text = dialog.FileName;
 
             }
-
+            */
         }
 
         private void numerosTextBox_keyDown(object sender, KeyEventArgs e)
@@ -554,7 +554,7 @@ namespace app1
         }
 
         private void RegistroIngresos(object sender, RoutedEventArgs e)
-        {
+        {/*
             this.Cursor = Cursors.Wait;
             String producto = txtProducto.Text.Trim();
             String proveedor = txtProveedor.Text.Trim();
@@ -635,9 +635,9 @@ namespace app1
                 this.Cursor = Cursors.Arrow;
                 MessageBox.Show(StringResources.MessageErrorEnInsercion);
             }
-
+            */
         }
-
+        
         private void DataGrid_Loaded(object sender, RoutedEventArgs e)
         {
             // ... Create a List of objects.
@@ -653,7 +653,7 @@ namespace app1
         }
 
         private void RegistroSalidas(object sender, RoutedEventArgs e)
-        {
+        {/*
             this.Cursor = Cursors.Wait;
             String producto = txtSalidaProducto.Text.Trim();
             String cantidad = txtSalidaCantidad.Text.Trim();
@@ -740,8 +740,8 @@ namespace app1
             }
 
         }
-
-        private List<Ingresos> IngresosDeHoy()
+        */
+        /*private List<Ingresos> IngresosDeHoy()
         {
 
             String sql = $"SELECT * FROM {ValuesDB.tablaingresos} WHERE {ValuesDB.ingresosFecha} = '{DateTime.Today.ToString("d")}';";
@@ -771,11 +771,11 @@ namespace app1
             //Movimiento mov = new Movimiento("1231", 12, "05/08/2018", "cemento", "usuario", "ingreso", "Argos");
             //datosGrid.Items.Add(mov);
             return ingresos;
-
+            */
         }
-
+        
         private void cargarIngresosDataGrid()
-        {
+        {/*
             this.Cursor = Cursors.Wait;
             datosGrid.Items.Clear();
             List<Ingresos> lista = IngresosDeHoy();
@@ -786,15 +786,27 @@ namespace app1
                 datosGrid.Items.Add(obj);
             }
             this.Cursor = Cursors.Arrow;
-
+            */
         }
-
+        
         private void GenerarReporte(Object sender, RoutedEventArgs e)
         {
+            Boolean ingresos = false;
+            Boolean salidas = false;
             String busqueda = txtBusquedaReporte.Text.Trim();
             if (String.IsNullOrEmpty(busqueda))
             {
-                MessageBox.Show(StringResources.MessageCamposErroneos);
+                //busqueda de todos los articulos
+                if (checkIngreso.IsChecked.Value) ingresos = true;
+                if (checkSalida.IsChecked.Value) salidas = true;
+                String fechaInicio = dateFechaInicio.Text;
+                String fechaFin = dateFechaInicio.Text;
+                DateTime fechaIici = dateFechaInicio.SelectedDate.Value;
+
+                ManejoExcel xlsx = new ManejoExcel();
+                Thread t = new Thread(new ThreadStart(xlsx.GenerarReporte));
+                t.Start();
+                MessageBox.Show("se generara el reporte, púede seguir trabajando mientras se genera");
             }
             else
             {

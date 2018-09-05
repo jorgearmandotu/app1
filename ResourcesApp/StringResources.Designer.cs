@@ -349,6 +349,24 @@ namespace ResourcesApp {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ingresos.
+        /// </summary>
+        public static string textoIngresos {
+            get {
+                return ResourceManager.GetString("textoIngresos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Salidas.
+        /// </summary>
+        public static string textoSalida {
+            get {
+                return ResourceManager.GetString("textoSalida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Contraseña:.
         /// </summary>
         public static string textPwd {

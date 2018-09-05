@@ -30,6 +30,7 @@ namespace app1.data
 
        public SQLiteDataReader EjecutarSql(String sql)
         {
+            MessageBox.Show(sql);
             Conectar();
             SQLiteCommand cmd = new SQLiteCommand(sql, con);
             SQLiteDataReader dr = cmd.ExecuteReader();

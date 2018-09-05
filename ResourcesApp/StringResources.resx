@@ -285,4 +285,12 @@
     <value>Selecione fecha inical: </value>
     <comment>selecine fecha inicial</comment>
   </data>
+  <data name="textoIngresos" xml:space="preserve">
+    <value>Ingresos</value>
+    <comment>texto de checbox ingresos</comment>
+  </data>
+  <data name="textoSalida" xml:space="preserve">
+    <value>Salidas</value>
+    <comment>texto checbox salidas</comment>
+  </data>
 </root>

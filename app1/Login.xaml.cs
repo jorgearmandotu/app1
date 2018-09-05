@@ -12,9 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SQLite;
+using app1.data;
 
 namespace app1
 {
+    
     /// <summary>
     /// Lógica de interacción para Window1.xaml
     /// </summary>
@@ -48,9 +50,11 @@ namespace app1
             //abro la db
             db.Open();
             //ejecuto query
-            SQLiteCommand cmd = new SQLiteCommand($"select{ValuesDB.userUsuarioDB}, {ValuesDB.userPaswordDB} from {ValuesDB.tablausuariosDB}", db);
-            SQLiteDataReader dr = cmd.ExecuteReader();
+            String sql = $"select {ValuesDB.userUsuarioDB}, {ValuesDB.userPasswordDB} from {ValuesDB.tablaUsuarios}";
+            SQLiteCommand cmd = new SQLiteCommand(sql, db);
 
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            
             Boolean login = false;
             while (dr.Read())
             {
