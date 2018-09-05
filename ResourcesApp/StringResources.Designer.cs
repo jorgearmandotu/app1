@@ -79,6 +79,24 @@ namespace ResourcesApp {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Apellido:.
+        /// </summary>
+        public static string labelApellido {
+            get {
+                return ResourceManager.GetString("labelApellido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Banco:.
+        /// </summary>
+        public static string labelBanco {
+            get {
+                return ResourceManager.GetString("labelBanco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Cantidad:.
         /// </summary>
         public static string labelCantidad {
@@ -151,6 +169,15 @@ namespace ResourcesApp {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a N°Cuenta.
+        /// </summary>
+        public static string labelNumeroCuenta {
+            get {
+                return ResourceManager.GetString("labelNumeroCuenta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Producto:.
         /// </summary>
         public static string labelProducto {
@@ -165,6 +192,15 @@ namespace ResourcesApp {
         public static string labelProveedor {
             get {
                 return ResourceManager.GetString("labelProveedor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Telefono:.
+        /// </summary>
+        public static string labelTelefono {
+            get {
+                return ResourceManager.GetString("labelTelefono", resourceCulture);
             }
         }
         

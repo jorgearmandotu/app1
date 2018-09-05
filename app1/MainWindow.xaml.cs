@@ -37,11 +37,11 @@ namespace app1
 
             InitializeComponent();
            
-           /* cargartxtProductos();
+            cargartxtProductos();
             cargartxtProveedor();
             cargarcmbIngCategoria();
             cargarTxtClientes();
-            cargartxtBusquedaReporte();*/
+            cargartxtBusquedaReporte();
             //var instFolder = Package.Current.InstalledLocation;
             //var imgPath = @"ms-appx:///Assets\conejo.bmp";
             var s = Directory.GetCurrentDirectory();
@@ -110,12 +110,13 @@ namespace app1
             txtProveedor.RemoveAllItem();
             //txtProveedorIngProducto.RemoveAllItem();
             DataBase db = new DataBase();
-            String sql = "select nombre from proveedor";
+            String sql = $"select {ValuesDB.personaNombreDB}, {ValuesDB.personaApellidoDB} from {ValuesDB.tablaProveedor} " +
+                $"inner join {ValuesDB.tablaPersona} where {ValuesDB.proveedorIdDB} = {ValuesDB.personaIdDB}";
             SQLiteDataReader dr = db.EjecutarSql(sql);
 
             while (dr.Read())
             {
-                String nombre = Convert.ToString(dr["nombre"]);
+                String nombre = Convert.ToString(dr[ValuesDB.personaNombreDB])+" "+Convert.ToString(dr[ValuesDB.personaApellidoDB]);
 
                 String[] sugerencias = nombre.Split(' ');
 
@@ -137,12 +138,13 @@ namespace app1
         {
             txtSalidaCliente.RemoveAllItem();
             DataBase db = new DataBase();
-            String sql = "select nombre from clientes";
+            String sql = $"select {ValuesDB.personaNombreDB}, {ValuesDB.personaApellidoDB} from {ValuesDB.tablaClientes} inner join " +
+                $"{ValuesDB.tablaPersona} where {ValuesDB.clientesIdDB} = {ValuesDB.personaIdDB}";
             SQLiteDataReader dr = db.EjecutarSql(sql);
 
             while (dr.Read())
             {
-                String nombre = Convert.ToString(dr["nombre"]);
+                String nombre = Convert.ToString(dr[ValuesDB.personaNombreDB])+" "+Convert.ToString(dr[ValuesDB.personaApellidoDB]);
 
                 String[] sugerencias = nombre.Split(' ');
 
@@ -163,12 +165,14 @@ namespace app1
         {
             txtBusquedaReporte.RemoveAllItem();
             DataBase db = new DataBase();
-            String sql = "select nombre from clientes";
+            String sql = $"select {ValuesDB.personaNombreDB}, {ValuesDB.personaApellidoDB} from {ValuesDB.tablaClientes} inner join " +
+                $"{ValuesDB.tablaPersona} inner join {ValuesDB.tablaProveedor} where {ValuesDB.clientesIdDB} = {ValuesDB.personaIdDB}" +
+                $" OR {ValuesDB.proveedorIdDB} = {ValuesDB.personaIdDB}";
             SQLiteDataReader dr = db.EjecutarSql(sql);
 
             while (dr.Read())
             {
-                String nombre = Convert.ToString(dr["nombre"]);
+                String nombre = Convert.ToString(dr[ValuesDB.personaNombreDB])+" "+Convert.ToString(dr[ValuesDB.personaApellidoDB]);
 
                 String[] sugerencias = nombre.Split(' ');
 
@@ -182,24 +186,7 @@ namespace app1
 
             }
             db.CerrarCon();
-            db = new DataBase();
-            sql = "select nombre from proveedor";
-            dr = db.EjecutarSql(sql);
-
-            while (dr.Read())
-            {
-                String nombre = Convert.ToString(dr["nombre"]);
-
-                String[] sugerencias = nombre.Split(' ');
-
-                foreach (var text in sugerencias)
-                {
-                    txtBusquedaReporte.AddItem(new AutoCompleteEntrada(nombre, text));
-                    //txtProveedorIngProducto.AddItem(new AutoCompleteEntrada(nombre, text));
-
-                }
-            }
-            db.CerrarCon();
+            
             db = new DataBase();
             sql = $"select {ValuesDB.productoNombreDB} from {ValuesDB.tablaProducto}";
             dr = db.EjecutarSql(sql);
@@ -216,7 +203,7 @@ namespace app1
             }
             dr.Close();
             db.CerrarCon();
-
+            
         }
 
         private void Button_MouseLeave(object sender, MouseEventArgs e)
@@ -226,8 +213,6 @@ namespace app1
 
         private void btnIngresos_MouseHover(Object sender, EventArgs e)
         {
-
-            MessageBox.Show("You are in the ToolStripItem.MouseHover event.");
 
         }
 
@@ -243,10 +228,10 @@ namespace app1
 
         private void btnIngresoProveedor_Click(object sender, RoutedEventArgs e)
         {
-
-          /*  
+            //id_proveedor, numerocuenta, banco,    id_persona, nombre, apellido, telefono
+          
             this.Cursor = Cursors.Wait;
-
+            
             String id = txtNitProveedor.Text.Trim();
             String nombre = txtNombreProveedor.Text.Trim();
             if (String.IsNullOrEmpty(id) || String.IsNullOrEmpty(nombre))
@@ -260,7 +245,7 @@ namespace app1
                 this.Cursor = Cursors.Arrow;
             }
             //this.Cursor = Cursors.Arrow;
-            */
+            
         }
         
         private void IngresoProveedor(String id, String nombre)

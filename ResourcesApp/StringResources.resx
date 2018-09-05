@@ -293,4 +293,20 @@
     <value>Salidas</value>
     <comment>texto checbox salidas</comment>
   </data>
+  <data name="labelApellido" xml:space="preserve">
+    <value>Apellido:</value>
+    <comment>texto apellido</comment>
+  </data>
+  <data name="labelBanco" xml:space="preserve">
+    <value>Banco:</value>
+    <comment>texto banco</comment>
+  </data>
+  <data name="labelNumeroCuenta" xml:space="preserve">
+    <value>N°Cuenta</value>
+    <comment>texto numero cuenta</comment>
+  </data>
+  <data name="labelTelefono" xml:space="preserve">
+    <value>Telefono:</value>
+    <comment>texto telefono</comment>
+  </data>
 </root>

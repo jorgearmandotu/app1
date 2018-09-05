@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:app1"
         xmlns:recursos="clr-namespace:ResourcesApp;assembly=ResourcesApp"
         mc:Ignorable="d"
-        Title="{x:Static recursos:StringResources.titleVentana}" Height="635" Width="780"
+        Title="{x:Static recursos:StringResources.titleVentana}" Height="700" Width="800"
         HorizontalAlignment="Center" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
 
     <Grid Margin="0,0,2,4">
-        <TabControl HorizontalAlignment="Left" Height="580" Margin="10,10,0,0" VerticalAlignment="Top" Width="750" TabStripPlacement="Left">
+        <TabControl HorizontalAlignment="Left" Height="640" Margin="10,10,0,0" VerticalAlignment="Top" Width="775" TabStripPlacement="Left">
             <TabItem Header="{x:Static recursos:StringResources.tabIngreso}" Height="40" >
-                <Grid Style="{StaticResource GridStyle}" Height="570">
+                <Grid Style="{StaticResource GridStyle}" Height="650">
                     <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="142" Margin="10,10,0,0" VerticalAlignment="Top" Width="637"/>
                     <Label Content="{x:Static recursos:StringResources.titleIngresos}" Style="{StaticResource LabelTitle}" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="129"/>
                     <Label Content="{x:Static recursos:StringResources.labelProducto}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Height="25" Margin="26,40,0,0" VerticalAlignment="Top" Width="67"/>
@@ -28,7 +28,7 @@
                     <Label Content="{x:Static recursos:StringResources.labelProducto}" Style="{StaticResource MyLabelStyle}" Margin="20,205,0,0" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     <Label Content="{x:Static recursos:StringResources.labelCantidad}" Style="{StaticResource MyLabelStyle}" Margin="20,237,0,0" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     <Label Content="{x:Static recursos:StringResources.labelCliente}" Style="{StaticResource MyLabelStyle}" Margin="20,268,0,0" Height="25" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <local:AutoCompleteTextbox Margin="122,207,329,340" x:Name="txtSalidaProducto" Height="23" Width="215"/>
+                    <local:AutoCompleteTextbox Margin="122,205,353.4,422" x:Name="txtSalidaProducto" Height="23" Width="215"/>
                     <TextBox Margin="122,240,0,0" Name="txtSalidaCantidad" Style="{StaticResource texboxEntry}" KeyDown="numerosTextBox_keyDown"/>
                     <local:AutoCompleteTextbox Style="{StaticResource autocomplete}" Margin="122,270,0,0" x:Name="txtSalidaCliente"/>
                     <Button Style="{StaticResource Button}" Content="{x:Static recursos:StringResources.textoIngresar}" Margin="440,230,91,0" Width="135" Click="RegistroSalidas"></Button>
@@ -49,7 +49,7 @@
                 <Grid Style="{StaticResource GridStyle}" Height="570"/>
             </TabItem>
             <TabItem Header="{x:Static recursos:StringResources.tabReportes}" Margin="-2,0,0.2,0" >
-                <Grid Style="{StaticResource GridStyle}" Height="570">
+                <Grid Style="{StaticResource GridStyle}" Height="640">
                     <Label Content="{x:Static recursos:StringResources.labelNombre}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"></Label>
                     <local:AutoCompleteTextbox Style="{StaticResource autocomplete}" Margin="86,10,0,0" x:Name="txtBusquedaReporte"/>
                     <DatePicker HorizontalAlignment="Left" Margin="138,50,0,0" VerticalAlignment="Top" Name="dateFechaInicio"/>
@@ -65,51 +65,59 @@
                 </Grid>
             </TabItem>
             <TabItem Header="{x:Static recursos:StringResources.tabPreferencias}" Height="40" Margin="-2,0,-0.2,0" VerticalAlignment="Top">
-                <Grid Style="{StaticResource GridStyle}" Height="570">
+                <Grid Style="{StaticResource GridStyle}" Height="640">
 
 
-                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="98" Margin="10,10,0,0" VerticalAlignment="Top" Width="630" />
+                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="162" Margin="10,10,0,0" VerticalAlignment="Top" Width="630" />
                     <Label Content="{x:Static recursos:StringResources.titleIngresoProveedor}" Style="{StaticResource LabelTitle}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                     <Label Content="{x:Static recursos:StringResources.labelNit}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
-                    <Label Content="{x:Static recursos:StringResources.labelNombre}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="txtNitProveedor" HorizontalAlignment="Left" Height="23" Margin="85,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.53,0.791"/>
-                    <TextBox Name="txtNombreProveedor" HorizontalAlignment="Left" Height="23" Margin="85,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250"/>
-                    <Button Name="btnIngresoProveedor" Content="{x:Static recursos:StringResources.textoIngresar}" Style="{StaticResource Button}" HorizontalAlignment="Left" Margin="373,55,0,0" VerticalAlignment="Top" Width="123" Click="btnIngresoProveedor_Click"/>
+                    <Label Content="{x:Static recursos:StringResources.labelApellido}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelBanco}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelNombre}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="323,32,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelTelefono}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="323,62,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelNumeroCuenta}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="323,92,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="txtNitProveedor" HorizontalAlignment="Left" Height="23" Margin="85,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.53,0.791"/>
+                    <TextBox Name="txtapellidoProveedor" HorizontalAlignment="Left" Height="23" Margin="85,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.53,0.791"/>
+                    <TextBox Name="txtNumCuentaProveedor" HorizontalAlignment="Left" Height="23" Margin="85,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.53,0.791"/>
+                    <TextBox Name="txtNombreProveedor" HorizontalAlignment="Left" Height="23" Margin="390,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="txttelefonoProveedor" HorizontalAlignment="Left" Height="23" Margin="390,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="txtCuentaProveedor" HorizontalAlignment="Left" Height="23" Margin="390,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
+                    <Button Name="btnIngresoProveedor" Content="{x:Static recursos:StringResources.textoIngresar}" Style="{StaticResource Button}" HorizontalAlignment="Left" Margin="271,127,0,0" VerticalAlignment="Top" Width="123" Click="btnIngresoProveedor_Click" RenderTransformOrigin="1.161,0.16"/>
 
-                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="95" Margin="10,118,0,0" VerticalAlignment="Top" Width="630"/>
-                    <Label Content="{x:Static recursos:StringResources.titleIngresoClientes}" Style="{StaticResource LabelTitle}" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top"/>
-                    <Label Content="{x:Static recursos:StringResources.labelNit}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.648,6.152"/>
-                    <Label Content="{x:Static recursos:StringResources.labelNombre}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" />
-                    <TextBox Name="txtidCliente" HorizontalAlignment="Left" Height="23" Margin="85,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.53,0.791"/>
-                    <TextBox Name="txtNombrecliente" HorizontalAlignment="Left" Height="23" Margin="85,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250"/>
-                    <Button Name="btnIngresoCliente" Content="{x:Static recursos:StringResources.textoIngresar}" Style="{StaticResource Button}" HorizontalAlignment="Left" Margin="373,163,0,0" VerticalAlignment="Top" Width="123" Click="btnIngresoCliente_Click"/>
+                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="95" Margin="10,188,0,0" VerticalAlignment="Top" Width="630"/>
+                    <Label Content="{x:Static recursos:StringResources.titleIngresoClientes}" Style="{StaticResource LabelTitle}" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelNit}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="13,218,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.648,6.152"/>
+                    <Label Content="{x:Static recursos:StringResources.labelNombre}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" />
+                    <TextBox Name="txtidCliente" HorizontalAlignment="Left" Height="23" Margin="85,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.53,0.791"/>
+                    <TextBox Name="txtNombrecliente" HorizontalAlignment="Left" Height="23" Margin="85,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250"/>
+                    <Button Name="btnIngresoCliente" Content="{x:Static recursos:StringResources.textoIngresar}" Style="{StaticResource Button}" HorizontalAlignment="Left" Margin="373,232,0,0" VerticalAlignment="Top" Width="123" Click="btnIngresoCliente_Click"/>
 
 
-                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="72" Margin="10,225,0,0" VerticalAlignment="Top" Width="630"/>
-                    <Label Content="{x:Static recursos:StringResources.titleIngresocategoria}" Style="{StaticResource LabelTitle}" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top"/>
-                    <Label Content="{x:Static recursos:StringResources.labelNombre}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="txtNombreCategoria" HorizontalAlignment="Left" Height="23" Margin="85,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250"/>
-                    <Button Name="btnIngresoCategoria" Content="{x:Static recursos:StringResources.textoIngresar}" Style="{StaticResource Button}" HorizontalAlignment="Left" Margin="373,260,0,0" VerticalAlignment="Top" Width="123" Click="btnIngresoCategoria_Click"/>
+                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="72" Margin="10,290,0,0" VerticalAlignment="Top" Width="630"/>
+                    <Label Content="{x:Static recursos:StringResources.titleIngresocategoria}" Style="{StaticResource LabelTitle}" HorizontalAlignment="Left" Margin="16,305,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelNombre}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="18,328,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="txtNombreCategoria" HorizontalAlignment="Left" Height="23" Margin="85,331,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250"/>
+                    <Button Name="btnIngresoCategoria" Content="{x:Static recursos:StringResources.textoIngresar}" Style="{StaticResource Button}" HorizontalAlignment="Left" Margin="373,323,0,0" VerticalAlignment="Top" Width="123" Click="btnIngresoCategoria_Click"/>
 
 
-                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="250" Margin="10,310,0,0" VerticalAlignment="Top" Width="630">
+                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="250" Margin="10,380,0,0" VerticalAlignment="Top" Width="630">
                     </Border>
-                    <Label Content="{x:Static recursos:StringResources.titleIngresoProducto}" Style="{StaticResource LabelTitle}" HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top"/>
-                    <Label Content="{x:Static recursos:StringResources.labelCategoria}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,335,0,0" VerticalAlignment="Top"/>
-                    <Label Content="{x:Static recursos:StringResources.labelCodProducto}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,363,0,0" VerticalAlignment="Top"/>
-                    <Label Content="{x:Static recursos:StringResources.labelUnidad}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="15,421,0,0" VerticalAlignment="Top" />
-                    <Label Content="{x:Static recursos:StringResources.labelProducto}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-                    <Label Content="{x:Static recursos:StringResources.labelVlrUnitario}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="15,447,0,0" VerticalAlignment="Top"/>
-                    <ComboBox Name="cmbIngCategoria" HorizontalAlignment="Left" Margin="114,341,0,0" VerticalAlignment="Top" Width="221" SelectedValue=""/>
-                    <TextBox Name="txtCodIngProducto" HorizontalAlignment="Left" Height="23" Margin="114,368,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221" KeyDown="numerosTextBox_keyDown"/>
-                    <TextBox Name="txtNombreProducto" HorizontalAlignment="Left" Height="23" Margin="114,396,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221"/>
-                    <TextBox Name="txtUnidadIngProducto" HorizontalAlignment="Left" Height="23" Margin="114,424,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221"/>
-                    <TextBox Name="txtVlrUnitarioProducto" HorizontalAlignment="Left" Height="23" Margin="114,452,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221" KeyDown="numerosTextBox_keyDown"/>
-                    <Image Name="imgIngresoProducto" HorizontalAlignment="Left" Height="124" Margin="411,323,0,0" VerticalAlignment="Top" Width="139"/>
-                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="129" Margin="409,322,0,0" VerticalAlignment="Top" Width="146"></Border>
-                    <TextBox Name="txtRutaImgIngProducto" HorizontalAlignment="Left" Height="19" Margin="409,456,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146" Focusable="False" FontWeight="Thin"/>
-                    <Button Name="btnIngImagenProducto" Content="{x:Static recursos:StringResources.textinsertImagen}" HorizontalAlignment="Left" Margin="409,475,0,0" VerticalAlignment="Top" Width="146" Click="btnIngImagenProducto_Click" Height="19"/>
-                    <Button Name="btnIngresoProducto" Content="{x:Static recursos:StringResources.textoIngresar}" Style="{StaticResource Button}" HorizontalAlignment="Left" Margin="304,523,0,0" VerticalAlignment="Top" Width="75" Click="btnIngresoProducto_Click" RenderTransformOrigin="0.578,0.833"/>
+                    <Label Content="{x:Static recursos:StringResources.titleIngresoProducto}" Style="{StaticResource LabelTitle}" HorizontalAlignment="Left" Margin="15,390,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelCategoria}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="15,447,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelCodProducto}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="15,478,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelUnidad}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="15,529,0,0" VerticalAlignment="Top" />
+                    <Label Content="{x:Static recursos:StringResources.labelProducto}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="13,504,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static recursos:StringResources.labelVlrUnitario}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="15,557,0,0" VerticalAlignment="Top"/>
+                    <ComboBox Name="cmbIngCategoria" HorizontalAlignment="Left" Margin="114,447,0,0" VerticalAlignment="Top" Width="221" SelectedValue=""/>
+                    <TextBox Name="txtCodIngProducto" HorizontalAlignment="Left" Height="23" Margin="114,475,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221" KeyDown="numerosTextBox_keyDown"/>
+                    <TextBox Name="txtNombreProducto" HorizontalAlignment="Left" Height="23" Margin="114,504,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221"/>
+                    <TextBox Name="txtUnidadIngProducto" HorizontalAlignment="Left" Height="23" Margin="114,532,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221"/>
+                    <TextBox Name="txtVlrUnitarioProducto" HorizontalAlignment="Left" Height="23" Margin="114,560,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221" KeyDown="numerosTextBox_keyDown"/>
+                    <Image Name="imgIngresoProducto" HorizontalAlignment="Left" Height="124" Margin="404,412,0,0" VerticalAlignment="Top" Width="139"/>
+                    <Border BorderBrush="Gray"  BorderThickness="1" HorizontalAlignment="Left" Height="129" Margin="404,412,0,0" VerticalAlignment="Top" Width="146"></Border>
+                    <TextBox Name="txtRutaImgIngProducto" HorizontalAlignment="Left" Height="19" Margin="404,541,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146" Focusable="False" FontWeight="Thin"/>
+                    <Button Name="btnIngImagenProducto" Content="{x:Static recursos:StringResources.textinsertImagen}" HorizontalAlignment="Left" Margin="404,560,0,0" VerticalAlignment="Top" Width="146" Click="btnIngImagenProducto_Click" Height="19"/>
+                    <Button Name="btnIngresoProducto" Content="{x:Static recursos:StringResources.textoIngresar}" Style="{StaticResource Button}" HorizontalAlignment="Left" Margin="304,600,0,0" VerticalAlignment="Top" Width="75" Click="btnIngresoProducto_Click" RenderTransformOrigin="0.578,0.833"/>
 
 
                 </Grid>

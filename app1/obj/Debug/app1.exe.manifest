@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="app1.exe" size="49624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="app1.exe" size="51672">
       <assemblyIdentity name="app1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sVViCmcPNx8n7coWxDh96qoWiFVLQQkT/jhvmHpeVuY=</dsig:DigestValue>
+        <dsig:DigestValue>3pOM5Cx/7UI2BrBpsKiJ+Jb7x/ZxZqliyg44nEMnQ/g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ResourcesApp.dll" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ResourcesApp.dll" size="14336">
       <assemblyIdentity name="ResourcesApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8LnNwkHHROh5UmcqhFejuMikXRF98Nl3zlSIn3mC59o=</dsig:DigestValue>
+        <dsig:DigestValue>JSiQfxA8EnC/6PdX0XDNn9J0qE1/tVvZHAQ929O6ps0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
