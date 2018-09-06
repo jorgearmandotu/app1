@@ -78,7 +78,7 @@
                     <Label Content="{x:Static recursos:StringResources.labelNumeroCuenta}" Style="{StaticResource MyLabelStyle}" HorizontalAlignment="Left" Margin="323,92,0,0" VerticalAlignment="Top"/>
                     <TextBox Name="txtNitProveedor" HorizontalAlignment="Left" Height="23" Margin="85,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.53,0.791"/>
                     <TextBox Name="txtapellidoProveedor" HorizontalAlignment="Left" Height="23" Margin="85,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.53,0.791"/>
-                    <TextBox Name="txtNumCuentaProveedor" HorizontalAlignment="Left" Height="23" Margin="85,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.53,0.791"/>
+                    <TextBox Name="txtbancoProveedor" HorizontalAlignment="Left" Height="23" Margin="85,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.53,0.791"/>
                     <TextBox Name="txtNombreProveedor" HorizontalAlignment="Left" Height="23" Margin="390,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
                     <TextBox Name="txttelefonoProveedor" HorizontalAlignment="Left" Height="23" Margin="390,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
                     <TextBox Name="txtCuentaProveedor" HorizontalAlignment="Left" Height="23" Margin="390,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>

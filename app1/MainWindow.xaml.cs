@@ -229,11 +229,17 @@ namespace app1
         private void btnIngresoProveedor_Click(object sender, RoutedEventArgs e)
         {
             //id_proveedor, numerocuenta, banco,    id_persona, nombre, apellido, telefono
+            //verificar si is persona ya esxiste cliente puede ser proveedor y viceversa
+
           
             this.Cursor = Cursors.Wait;
             
             String id = txtNitProveedor.Text.Trim();
             String nombre = txtNombreProveedor.Text.Trim();
+            String apellido = txtapellidoProveedor.Text.Trim();
+            String telefono = txttelefonoProveedor.Text.Trim();
+            String banco = txtbancoProveedor.Text.Trim();
+            String nCuenta = txtCuentaProveedor.Text.Trim();
             if (String.IsNullOrEmpty(id) || String.IsNullOrEmpty(nombre))
             {
                 this.Cursor = Cursors.Arrow;
@@ -241,11 +247,40 @@ namespace app1
             }
             else
             {
-                IngresoProveedor(id, nombre);
+                Persona p = ObtenerPersona(id);
+                //MessageBox.Show(p.Id+" "+p.Nombre+" "+p.Apellido+" "+p.Telefono);
+                if(p == null)
+                {
+                    
+                }
+                else
+                {
+                    //ingresar numerocuenta, banco, idProveedor
+                }
+                //IngresoProveedor(id, nombre);
                 this.Cursor = Cursors.Arrow;
             }
             //this.Cursor = Cursors.Arrow;
             
+        }
+
+        private Persona ObtenerPersona(String id)
+        {
+            Persona p = null; ;
+            string sql = $"SELECT * FROM {ValuesDB.tablaPersona} WHERE {ValuesDB.personaIdDB} = {id}";
+            DataBase db = new DataBase();
+            SQLiteDataReader dr = db.EjecutarSql(sql);
+            while (dr.Read())
+            {
+                p = new Persona();
+                p.Id = Convert.ToString(dr[ValuesDB.personaIdDB]);
+                p.Nombre = Convert.ToString(dr[ValuesDB.personaNombreDB]);
+                p.Apellido = Convert.ToString(dr[ValuesDB.personaApellidoDB]);
+                p.Telefono = Convert.ToString(dr[ValuesDB.personaTelefonoDB]);
+                
+                
+            }
+            return p;
         }
         
         private void IngresoProveedor(String id, String nombre)

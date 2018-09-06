@@ -141,6 +141,7 @@
   <ItemGroup>
     <Compile Include="objetos\ManejoExcel.cs" />
     <Compile Include="objetos\Movimiento.cs" />
+    <Compile Include="objetos\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
