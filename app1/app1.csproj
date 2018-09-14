@@ -107,6 +107,7 @@
     <Compile Include="CreacionDataBase.cs" />
     <Compile Include="data\DataBase.cs" />
     <Compile Include="data\ValuesDB.cs" />
+    <Compile Include="helper\Language.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>

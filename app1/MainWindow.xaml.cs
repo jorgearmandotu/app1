@@ -1,30 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Data.SQLite;
-using app1.data;
-using System.Data;
-using ResourcesApp;
-using Microsoft.Win32;
-using System.IO.Packaging;
-using System.IO;
-using app1.objetos;
-using System.Threading;
-//using Microsoft.Office.Interop.Excel;
-
+﻿
 namespace app1
 {
+    using System;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Input;
+    using System.Windows.Media.Imaging;
+    using System.Data.SQLite;
+    using app1.data;
+    using ResourcesApp;
+    using System.IO;
+    using app1.objetos;
+    using System.Threading;
+    using app1.helper;
+    //using Microsoft.Office.Interop.Excel;
+
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
@@ -243,24 +233,43 @@ namespace app1
             if (String.IsNullOrEmpty(id) || String.IsNullOrEmpty(nombre))
             {
                 this.Cursor = Cursors.Arrow;
-                MessageBox.Show(StringResources.MessageCamposErroneos);
+                MessageBox.Show(helper.Language.MessageCamposErroneos);
+                return;
             }
             else
             {
+               /* if (String.IsNullOrEmpty(apellido)) apellido = " ";
+                if (String.IsNullOrEmpty(telefono)) telefono = " ";
+                if (String.IsNullOrEmpty(banco)) banco = " ";
+                if (String.IsNullOrEmpty(nCuenta)) nCuenta = " ";*/
+
                 Persona p = ObtenerPersona(id);
+                String sql = "";
                 //MessageBox.Show(p.Id+" "+p.Nombre+" "+p.Apellido+" "+p.Telefono);
                 if(p == null)
                 {
-                    
+                    //Insertamos a persona y proveedor
+                    sql = $"insert into persona values('{id}', '{nombre}', '{apellido}', '{telefono}'); "+
+                         $"insert into proveedor values('{id}', '{nCuenta}', '{banco}')";
                 }
                 else
                 {
                     //ingresar numerocuenta, banco, idProveedor
+                    sql = $"insert in to proveedor values({id}, {banco}, {nCuenta})";
                 }
                 //IngresoProveedor(id, nombre);
-                this.Cursor = Cursors.Arrow;
+                DataBase db = new DataBase();
+                if (db.InsertarTransaacionSQL(sql))
+                {
+                    MessageBox.Show(helper.Language.MessageInsercionExitosa);
+                }
+                else
+                {
+                    MessageBox.Show(helper.Language.MessageErrorEnInsercion);
+                }
             }
-            //this.Cursor = Cursors.Arrow;
+
+            this.Cursor = Cursors.Arrow;
             
         }
 
@@ -277,8 +286,8 @@ namespace app1
                 p.Nombre = Convert.ToString(dr[ValuesDB.personaNombreDB]);
                 p.Apellido = Convert.ToString(dr[ValuesDB.personaApellidoDB]);
                 p.Telefono = Convert.ToString(dr[ValuesDB.personaTelefonoDB]);
-                
-                
+
+                String a = helper.Language.MessageCamposErroneos;
             }
             return p;
         }

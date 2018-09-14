@@ -72,6 +72,7 @@ namespace app1.data
 
         public Boolean InsertarTransaacionSQL(String sql)
         {
+            MessageBox.Show(sql);
             bool res = false;
             Conectar();
             try
