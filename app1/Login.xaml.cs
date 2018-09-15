@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SQLite;
 using app1.data;
+using System.IO;
 
 namespace app1
 {
