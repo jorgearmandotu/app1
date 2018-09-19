@@ -46,11 +46,9 @@ namespace app1
         private void logear()
         {
         	string path = Directory.GetCurrentDirectory();
-        MessageBox.Show(path);
-        MessageBox.Show(DBName);
             //creo coneecion
             var db = new SQLiteConnection(
-               string.Format("Data Source={0};Version=3;", DBName));
+               string.Format($"Data Source=c://{DBName};Version=3;"));
             //abro la db
             db.Open();
             //ejecuto query
