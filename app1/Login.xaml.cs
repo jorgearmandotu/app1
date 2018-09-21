@@ -48,7 +48,7 @@ namespace app1
         	string path = Directory.GetCurrentDirectory();
             //creo coneecion
             var db = new SQLiteConnection(
-               string.Format($"Data Source=c://{DBName};Version=3;"));
+               string.Format($"Data Source={DBName};Version=3;"));
             //abro la db
             db.Open();
             //ejecuto query

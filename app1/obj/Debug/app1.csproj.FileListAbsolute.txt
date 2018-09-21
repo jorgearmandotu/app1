@@ -168,3 +168,5 @@ D:\C# Proyects\app1\app1\obj\Debug\app1.csproj.CoreCompileInputs.cache
 D:\C# Proyects\app1\app1\obj\Debug\app1.exe.manifest
 D:\C# Proyects\app1\app1\obj\Debug\app1.application
 D:\C# Proyects\app1\app1\obj\Debug\app1.csproj.CopyComplete
+D:\C# Proyects\app1\app1\obj\Debug\app1_Content.g.cs
+D:\C# Proyects\app1\app1\bin\Debug\data.db

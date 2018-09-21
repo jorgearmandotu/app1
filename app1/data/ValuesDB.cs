@@ -9,7 +9,7 @@ namespace app1.data
     public class ValuesDB
     {
 
-        public  const String DBName = "data.db";
+        public  const String DBName = "./data.db";
         public  const int DataVersion = 3;
         public  const String tablaProducto = "producto";
         public  const String tablaCategoria = "categoria";
